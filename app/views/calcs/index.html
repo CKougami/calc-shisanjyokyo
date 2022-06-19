@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Sample</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="calc.js"></script>
+</head>
+<body>
+  <div class="header">
+    <div class="title">
+      資産除去債務
+    </div>
+  </div>
+  <div class="input">
+    <label class="form-label">資産除去費用</label>
+    <input id = "cost" type="cost" class="form-control" placeholder="JPY'000">
+    <label class="form-label">使用期間（年）</label>
+    <input id = "cost" type="cost" class="form-control" placeholder="例）5"> 
+    <label class="form-label">利息（％）※取得日の国債金利<a href=https://www.mof.go.jp/jgbs/reference/interest_rate/index.htm target="_blank" class="alert-link"> （国債金利情報）</a></label>
+    <input id = "cost" type="cost" class="form-control" placeholder="例）1"> 
+    <div class="result">
+      資産除去額
+    </div>
+  </div>
+
+  <h4>5年間の推移</h4>
+  <div class="table">
+    <table class="table-style">
+      <thead>
+        <tr>
+          <th scope="col">年</th>
+          <th scope="col">資産側（減価償却費）</th>
+          <th scope="col">負債側（資産除去債務）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1年</td>
+          <td> 取得価格（固定） * 0.2 </td>
+          <td> 初年取得価格 * 101% </td>
+        </tr>
+        <tr>
+          <td>2年</td>
+          <td> 取得価格（固定） * 0.2 </td>
+          <td> 1年目の負債額 * 101% </td>
+        </tr>
+        <tr>
+          <td>3年</td>
+          <td> 取得価格（固定） * 0.2 </td>
+          <td> 2年目の負債額 * 101% </td>
+        </tr>
+        <tr>
+          <td>4年</td>
+          <td> 取得価格（固定） * 0.2 </td>
+          <td> 3年目の負債額 * 101% </td>
+        </tr>
+        <tr>
+          <td>5年</td>
+          <td> 取得価格（固定） * 02 </td>
+          <td> 4年目の負債額 * 101% </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>
