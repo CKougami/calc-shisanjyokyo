@@ -13,26 +13,40 @@
 }
  
 .input {
-  width: 40%;
+  width: 50%;
+  height: 260px;
   padding: 60px 0 0 10px;
   color: #393E46;
-  background-color: antiquewhite; /* 実装完了したら消す */
 }
-
-.form-label {
+.label {
   display: block;
   color: #393E46;
 }
 
-.form-control {
-  height: 25px;
-  width: 208px;
-}
 .result {
   display: block;
   color: #393E46;
 }
 
 .table {
+  text-align: center;
+  border-collapse: collapse;
+  border-spacing: 0;
   border-bottom: #393E46;
 }
+
+.table th {
+  /* padding: 10px; */
+  width: 80px;
+  background: #778ca3;
+  border: solid 1px #666666;
+  color: #ffffff;
+ }
+
+ .table td {
+  padding: 10px;
+  border: solid 1px #666666;
+ }
+ .table td:first-child {
+  background: #e9faf9;
+ } 

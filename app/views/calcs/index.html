@@ -1,68 +1,30 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <title>HTML Sample</title>
-  <link rel="stylesheet" href="style.css">
-  <script type="text/javascript" src="calc.js"></script>
-</head>
-<body>
-  <div class="header">
-    <div class="title">
-      資産除去債務
-    </div>
+ <div class="header">
+  <div class="title">
+    <h3>資産除去債務</h3>
   </div>
-  <div class="input">
-    <label class="form-label">資産除去費用</label>
-    <input id = "cost" type="cost" class="form-control" placeholder="JPY'000">
-    <label class="form-label">使用期間（年）</label>
-    <input id = "cost" type="cost" class="form-control" placeholder="例）5"> 
-    <label class="form-label">利息（％）※取得日の国債金利<a href=https://www.mof.go.jp/jgbs/reference/interest_rate/index.htm target="_blank" class="alert-link"> （国債金利情報）</a></label>
-    <input id = "cost" type="cost" class="form-control" placeholder="例）1"> 
-    <div class="result">
-      資産除去額
-    </div>
+</div>
+
+<style>
+#data tbody tr td:first-of-type:after { content: "年"}
+</style>
+
+<div class="tab">
+  <body>
+  <div id="input" class="input">
+    <label class="label">資産除去費用</label>
+    <input type="number" placeholder="JPY'000">
+    <label class="label">使用期間（年）</label>
+    <input type="number" placeholder="例）5">
+    <label class="label">利息（％）※取得日の国債金利<a href=https://www.mof.go.jp/jgbs/reference/interest_rate/index.htm target="_blank" class="alert-link"> （国債金利情報）</a></label>
+    <input type="number" placeholder="例）1">
+
+    <button id="calc">計算</button><br>
+    <label class="label">取得価値</label>
+    <output id="result"></output>
   </div>
 
-  <h4>5年間の推移</h4>
-  <div class="table">
-    <table class="table-style">
-      <thead>
-        <tr>
-          <th scope="col">年</th>
-          <th scope="col">資産側（減価償却費）</th>
-          <th scope="col">負債側（資産除去債務）</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1年</td>
-          <td> 取得価格（固定） * 0.2 </td>
-          <td> 初年取得価格 * 101% </td>
-        </tr>
-        <tr>
-          <td>2年</td>
-          <td> 取得価格（固定） * 0.2 </td>
-          <td> 1年目の負債額 * 101% </td>
-        </tr>
-        <tr>
-          <td>3年</td>
-          <td> 取得価格（固定） * 0.2 </td>
-          <td> 2年目の負債額 * 101% </td>
-        </tr>
-        <tr>
-          <td>4年</td>
-          <td> 取得価格（固定） * 0.2 </td>
-          <td> 3年目の負債額 * 101% </td>
-        </tr>
-        <tr>
-          <td>5年</td>
-          <td> 取得価格（固定） * 02 </td>
-          <td> 4年目の負債額 * 101% </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-</body>
-</html>
+  <table class="table" id="data" >
+    <thead>
+      <tr><th>年<th>資産<th>負債
+  </table>
+</div>
