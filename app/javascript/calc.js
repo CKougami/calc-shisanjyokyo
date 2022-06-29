@@ -10,7 +10,7 @@ window.addEventListener('load', function(){
   
     // 負債側の計算結果を配列に格納
     for (let i = 0, rd = r; i < b; i++)
-      g.push ([i + 1, (r).toLocaleString(), (rd += ceil (rd * 0.01)).toLocaleString()]);  
+      g.push ([i + 1, (r / b).toLocaleString(), (rd += ceil (rd * 0.01)).toLocaleString()]);  
   
     [...data.tBodies].forEach (e=> e.remove ());
   
